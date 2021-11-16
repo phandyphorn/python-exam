@@ -375,3 +375,49 @@ def average(numberOfStudent):
     return int(totalAverage/numberOfStudents)
 numberOfStudents = int(input("enter number: "))
 print(average(numberOfStudents))
+
+
+# =====================Seventh Exam============
+# Number One
+array = eval(input())
+for number in range(len(array)):
+    if array[number] in range(10,35) or array[number] in range(-35,-10):
+        array[number] = array[number]*-1
+print(array)
+
+# Number Two
+array2D = eval(input())
+for row in array2D:
+    for number in range(len(row)):
+        if row[number] < 3 and row[number]> 0:
+            row[number] = "#"
+        elif row[number] >= 6 and row[number] < 9:
+            row[number] = "@"
+        elif row[number] < 0:
+            row[number] = "$"
+print(array2D)
+
+# Number Three
+array = eval(input())
+arrayDuringSum = []
+sumNumsInArray = 0
+for nums in array:
+    if sumNumsInArray < 100:
+        sumNumsInArray += nums
+        arrayDuringSum.append(nums)
+for nums in array:
+    sumNumsInArray += nums
+    if sumNumsInArray < 100:
+        arrayDuringSum = []
+print(arrayDuringSum)
+
+
+# Number Four
+array2D = eval(input())
+for value in array2D:
+    if value[2] <= 18:
+        value.append("minor")
+    elif value[2] >= 18:
+        value.append("major")
+print(array2D)
+
